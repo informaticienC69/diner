@@ -1,0 +1,235 @@
+/* Tech-themed styles for login and registration pages */
+
+/* Cyberpunk-styled auth container */
+.auth-container {
+  max-width: 450px;
+  margin: 40px auto;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 35px 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Matrix background effect */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/matrix-bg.svg');
+  background-size: 400px;
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Terminal-style header */
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-family: var(--font-code);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 15px auto 0;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  border-radius: var(--radius);
+}
+
+/* Form groups with tech styling */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Cyberpunk inputs with glow effect */
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: var(--bg-light);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  color: var(--text-color);
+  font-size: 1rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.2), 0 0 10px rgba(0, 229, 255, 0.1);
+}
+
+/* Input placeholder styling */
+.form-group input::placeholder {
+  color: rgba(160, 160, 160, 0.5);
+  font-style: italic;
+}
+
+/* Help text styling */
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-family: var(--font-code);
+}
+
+/* Submit button with neon effect */
+.auth-container button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background-color: rgba(0, 229, 255, 0.1);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-family: var(--font-code);
+}
+
+.auth-container button[type="submit"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.auth-container button[type="submit"]:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+.auth-container button[type="submit"]:hover::before {
+  left: 100%;
+}
+
+/* Tech-styled auth links */
+.auth-links {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-main);
+}
+
+.auth-links a {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: var(--transition);
+  font-family: var(--font-code);
+  border-bottom: 1px dashed rgba(0, 229, 255, 0.3);
+  padding-bottom: 2px;
+}
+
+.auth-links a:hover {
+  color: white;
+  text-shadow: 0 0 8px var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* Error and success messages */
+.error-message, 
+.success-message {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: var(--radius);
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+}
+
+.error-message {
+  background-color: rgba(255, 23, 68, 0.1);
+  border-left: 4px solid var(--error-color);
+  color: var(--error-color);
+}
+
+.success-message {
+  background-color: rgba(0, 230, 118, 0.1);
+  border-left: 4px solid var(--success-color);
+  color: var(--success-color);
+}
+
+/* Loading animation for button */
+.auth-container button[type="submit"].loading {
+  position: relative;
+  color: transparent;
+}
+
+.auth-container button[type="submit"].loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Tech inspired animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-container {
+  animation: slideIn 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+  .auth-container {
+    margin: 20px;
+    padding: 25px 20px;
+  }
+}

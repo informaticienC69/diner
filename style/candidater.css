@@ -1,0 +1,314 @@
+/* Tech-styled candidate registration page */
+
+/* Main container for candidate form */
+.candidater-container {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 35px 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Tech pattern background for form */
+.candidater-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/circuit-pattern.svg');
+  background-size: 600px;
+  opacity: 0.04;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Terminal-style header */
+.candidater-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: var(--font-code);
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Matrix-style form with glowing elements */
+.candidater-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cyberpunk styled form groups */
+.form-group {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+/* Terminal-style labels */
+.candidater-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Tech-styled inputs */
+.candidater-form input,
+.candidater-form select {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: var(--bg-light);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  color: var(--text-color);
+  font-size: 1rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.candidater-form input:focus,
+.candidater-form select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.2), 0 0 10px rgba(0, 229, 255, 0.1);
+}
+
+/* Custom styled select */
+.candidater-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2300e5ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
+}
+
+/* Cyberpunk file input */
+.candidater-form input[type="file"] {
+  padding: 15px;
+  border: 1px dashed var(--primary-color);
+  background-color: rgba(0, 229, 255, 0.05);
+  cursor: pointer;
+  position: relative;
+}
+
+.candidater-form input[type="file"]::before {
+  content: "📷 Sélectionner une image";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-code);
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: var(--radius);
+}
+
+.candidater-form input[type="file"]:hover::before {
+  background-color: rgba(0, 229, 255, 0.1);
+}
+
+/* File format help text */
+.candidater-form small {
+  display: block;
+  margin-top: 5px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-family: var(--font-code);
+}
+
+/* Submit button with cyberpunk style */
+.candidater-form button {
+  margin-top: 15px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: rgba(0, 229, 255, 0.1);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-family: var(--font-code);
+  position: relative;
+  overflow: hidden;
+}
+
+.candidater-form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.candidater-form button:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+.candidater-form button:hover::before {
+  left: 100%;
+}
+
+/* Terminal-style back link */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: var(--font-code);
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+}
+
+.back-link:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Candidate info display style */
+.candidate-info {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cyberpunk-styled candidate photo */
+.candidate-info img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  filter: contrast(110%);
+}
+
+.candidate-info h2 {
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  font-family: var(--font-code);
+}
+
+.candidate-genre {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-family: var(--font-code);
+}
+
+/* Warning message for candidate withdrawal */
+.warning-message {
+  background-color: rgba(255, 23, 68, 0.1);
+  border-left: 4px solid var(--error-color);
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: var(--radius);
+  position: relative;
+  z-index: 1;
+}
+
+.warning-message p {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--error-color);
+  font-family: var(--font-code);
+}
+
+.warning-message ul {
+  margin-left: 20px;
+  color: var(--text-color);
+}
+
+.warning-message li {
+  margin-bottom: 8px;
+  font-family: var(--font-main);
+  position: relative;
+}
+
+.warning-message li::before {
+  content: "⚠";
+  margin-right: 8px;
+  color: var(--error-color);
+}
+
+/* Delete button with warning style */
+.delete-btn {
+  background-color: rgba(255, 23, 68, 0.1);
+  color: var(--error-color);
+  border: 1px solid var(--error-color);
+  margin-top: 20px;
+  font-family: var(--font-code);
+}
+
+.delete-btn:hover {
+  background-color: var(--error-color);
+  color: var(--text-color);
+  box-shadow: 0 0 15px var(--error-color);
+}
+
+/* Matrix-inspired animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.candidater-container {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Glitch effect for warning messages */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.delete-btn:hover,
+.warning-message p {
+  animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  animation-delay: 0.25s;
+}
