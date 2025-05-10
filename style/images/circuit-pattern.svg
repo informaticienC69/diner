@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .circuit-path {
+        fill: none;
+        stroke: #00e5ff;
+        stroke-width: 1.5;
+        stroke-opacity: 0.15;
+      }
+      .circuit-dot {
+        fill: #00e5ff;
+        fill-opacity: 0.2;
+      }
+      .circuit-connector {
+        fill: none;
+        stroke: #00e5ff;
+        stroke-width: 2;
+        stroke-opacity: 0.15;
+      }
+    </style>
+  </defs>
+  
+  <!-- Horizontal Lines -->
+  <path class="circuit-path" d="M 20,50 H 580" />
+  <path class="circuit-path" d="M 50,100 H 550" />
+  <path class="circuit-path" d="M 80,150 H 520" />
+  <path class="circuit-path" d="M 20,200 H 580" />
+  <path class="circuit-path" d="M 50,250 H 550" />
+  <path class="circuit-path" d="M 80,300 H 520" />
+  <path class="circuit-path" d="M 20,350 H 580" />
+  <path class="circuit-path" d="M 50,400 H 550" />
+  <path class="circuit-path" d="M 80,450 H 520" />
+  <path class="circuit-path" d="M 20,500 H 580" />
+  <path class="circuit-path" d="M 50,550 H 550" />
+  
+  <!-- Vertical Lines -->
+  <path class="circuit-path" d="M 50,20 V 580" />
+  <path class="circuit-path" d="M 100,50 V 550" />
+  <path class="circuit-path" d="M 150,80 V 520" />
+  <path class="circuit-path" d="M 200,20 V 580" />
+  <path class="circuit-path" d="M 250,50 V 550" />
+  <path class="circuit-path" d="M 300,80 V 520" />
+  <path class="circuit-path" d="M 350,20 V 580" />
+  <path class="circuit-path" d="M 400,50 V 550" />
+  <path class="circuit-path" d="M 450,80 V 520" />
+  <path class="circuit-path" d="M 500,20 V 580" />
+  <path class="circuit-path" d="M 550,50 V 550" />
+  
+  <!-- Connection Dots -->
+  <circle class="circuit-dot" cx="50" cy="50" r="4" />
+  <circle class="circuit-dot" cx="50" cy="200" r="4" />
+  <circle class="circuit-dot" cx="50" cy="350" r="4" />
+  <circle class="circuit-dot" cx="50" cy="500" r="4" />
+  
+  <circle class="circuit-dot" cx="150" cy="150" r="4" />
+  <circle class="circuit-dot" cx="150" cy="300" r="4" />
+  <circle class="circuit-dot" cx="150" cy="450" r="4" />
+  
+  <circle class="circuit-dot" cx="200" cy="50" r="4" />
+  <circle class="circuit-dot" cx="200" cy="200" r="4" />
+  <circle class="circuit-dot" cx="200" cy="350" r="4" />
+  <circle class="circuit-dot" cx="200" cy="500" r="4" />
+  
+  <circle class="circuit-dot" cx="300" cy="150" r="4" />
+  <circle class="circuit-dot" cx="300" cy="300" r="4" />
+  <circle class="circuit-dot" cx="300" cy="450" r="4" />
+  
+  <circle class="circuit-dot" cx="350" cy="50" r="4" />
+  <circle class="circuit-dot" cx="350" cy="200" r="4" />
+  <circle class="circuit-dot" cx="350" cy="350" r="4" />
+  <circle class="circuit-dot" cx="350" cy="500" r="4" />
+  
+  <circle class="circuit-dot" cx="450" cy="150" r="4" />
+  <circle class="circuit-dot" cx="450" cy="300" r="4" />
+  <circle class="circuit-dot" cx="450" cy="450" r="4" />
+  
+  <circle class="circuit-dot" cx="500" cy="50" r="4" />
+  <circle class="circuit-dot" cx="500" cy="200" r="4" />
+  <circle class="circuit-dot" cx="500" cy="350" r="4" />
+  <circle class="circuit-dot" cx="500" cy="500" r="4" />
+  
+  <!-- Special Connectors -->
+  <path class="circuit-connector" d="M 50,50 C 70,50 70,100 100,100" />
+  <path class="circuit-connector" d="M 200,200 C 220,200 220,250 250,250" />
+  <path class="circuit-connector" d="M 350,350 C 370,350 370,400 400,400" />
+  <path class="circuit-connector" d="M 500,500 C 520,500 520,550 550,550" />
+  
+  <path class="circuit-connector" d="M 150,150 C 150,170 100,170 100,200" />
+  <path class="circuit-connector" d="M 300,300 C 300,320 250,320 250,350" />
+  <path class="circuit-connector" d="M 450,450 C 450,470 400,470 400,500" />
+  
+  <!-- Microchip Shapes -->
+  <rect x="90" y="90" width="70" height="70" stroke="#00e5ff" stroke-width="1.5" stroke-opacity="0.15" fill="none" />
+  <rect x="240" y="240" width="70" height="70" stroke="#00e5ff" stroke-width="1.5" stroke-opacity="0.15" fill="none" />
+  <rect x="390" y="390" width="70" height="70" stroke="#00e5ff" stroke-width="1.5" stroke-opacity="0.15" fill="none" />
+  
+  <!-- CPU-like Pattern -->
+  <rect x="290" y="140" width="120" height="120" stroke="#00e5ff" stroke-width="1.5" stroke-opacity="0.2" fill="none" />
+  <line x1="290" y1="170" x2="410" y2="170" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.2" />
+  <line x1="290" y1="200" x2="410" y2="200" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.2" />
+  <line x1="290" y1="230" x2="410" y2="230" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.2" />
+  <line x1="320" y1="140" x2="320" y2="260" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.2" />
+  <line x1="350" y1="140" x2="350" y2="260" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.2" />
+  <line x1="380" y1="140" x2="380" y2="260" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.2" />
+</svg>
